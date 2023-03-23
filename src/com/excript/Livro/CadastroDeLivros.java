@@ -13,7 +13,6 @@ public class CadastroDeLivros {
 		livro.valor = 19.99;
 		livro.ISBN = "342-65-3489-47-1";
 		livro.autor = autor;
-		livro.existeAutor();
 		livro.impressaoDados();
 		
 		System.out.println("");
@@ -23,13 +22,12 @@ public class CadastroDeLivros {
 		autor2.email = "jonathanswift@gmail.com";
 		autor2.cpf = "503.090.112-90";
 		
-		Livro livro2 = new Livro();
+		Livro livro2 = new Livro("Mateus");
 		livro2.nome = "As Viagens de Gulliver";
 		livro2.descricao = "Um livro sobre um gigante";
 		livro2.valor = 19.99;
 		livro2.ISBN = "656-76-4567-32-2";
 		livro2.autor = autor2;
-		livro2.existeAutor();
 		livro2.impressaoDados();
 		
 	}

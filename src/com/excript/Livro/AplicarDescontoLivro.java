@@ -7,8 +7,9 @@ public class AplicarDescontoLivro {
 		livro.descricao = "Uma aventura em uma distopia";
 		livro.valor = 30;
 		livro.ISBN = "3234-221-33-1";
+		System.out.println("Aplicando desconto...");
 		
-		double desconto = livro.valor*0.9;
-		System.out.println(desconto);
+		livro.AplicarDesconto(0.10);
+		System.out.println(livro.valor);
 	}
 }
