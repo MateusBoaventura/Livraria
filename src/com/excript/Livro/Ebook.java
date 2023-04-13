@@ -21,12 +21,11 @@ public class Ebook extends Livro{
 	}
 	
 	@Override
-	public boolean AplicarDescontoDe(double porcentagem) {
-		if(porcentagem > 0.15 || porcentagem < 0) {
+	public boolean aplicaDescontoDe(double porcentagem) {
+		if(porcentagem > 0.15) {
 			return false;
 		}else {
-			this.setValor(this.getValor() - (this.getValor() * porcentagem));
-			return true;
+			return super.aplicaDescontoDe(porcentagem);
 		}
 	}
 }

@@ -2,14 +2,22 @@ package com.excript.Livro;
 
 public class AplicarDescontoLivro {
 	public static void main(String[] args) {
-		Livro livro = new Livro();
-		livro.nome = "Mistborn";
-		livro.descricao = "Uma aventura em uma distopia";
-		livro.valor = 30;
-		livro.ISBN = "3234-221-33-1";
-		System.out.println("Aplicando desconto...");
+		Autor autor = new Autor();
+		autor.setNome("Maria");
 		
-		livro.AplicarDesconto(0.10);
-		System.out.println(livro.valor);
+		Livro livro = new Livro();
+		livro.setNome("O tamandua de Ribeirao Preto");
+		livro.setValor(29.90);
+		
+		Ebook ebook = new Ebook();
+		ebook.setNome("As caspas de Joana");
+		ebook.setValor(39.90);
+		
+		livro.aplicaDescontoDe(0.3);
+		ebook.aplicaDescontoDe(0.10);
+		
+		System.out.println(livro.getValor());
+		System.out.println(ebook.getValor());
+		
 	}
 }
